@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "-g",
+          "D:/Game/src/main.cpp",             // Source file
+          "-o",
+          "D:/Game/build/game.exe",           // Output file
+          "-ID:/Game/vcpkg/installed/x64-windows/include", // Include SDL2 headers
+          "-LD:/Game/vcpkg/installed/x64-windows/lib",     // Link SDL2 libraries
+          "-lSDL2"                            // Link SDL2 library
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Generated task to compile SDL2 project"
+      }
+    ]
+  }
+  
